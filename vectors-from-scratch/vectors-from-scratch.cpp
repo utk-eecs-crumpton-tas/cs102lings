@@ -1,3 +1,9 @@
+/* Program Name: PROGRAM NAME HERE
+ * Student Name: YOUR NAME HERE
+ * Net ID: NETID HERE
+ * Student ID: STUDENT ID HERE (000-12-3456)
+ * Program Description: BRIEF, 1-2 SENTENCE DESCRIPTION HERE */
+
 #include <iomanip>
 #include <iostream>
 #include <sstream>

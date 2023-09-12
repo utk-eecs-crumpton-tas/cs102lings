@@ -1,9 +1,15 @@
-/* TODO: Don't forget your header and to comment your code! */
+/* Program Name: PROGRAM NAME HERE
+ * Student Name: YOUR NAME HERE
+ * Net ID: NETID HERE
+ * Student ID: STUDENT ID HERE (000-12-3456)
+ * Program Description: BRIEF, 1-2 SENTENCE DESCRIPTION HERE */
+
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
-void printVector(vector <int> &vec) {
+void printVector(vector<int> &vec) {
   for (int i = 0; i < vec.size(); ++i) {
     cout << "  " << vec.at(i);
   }
@@ -11,7 +17,7 @@ void printVector(vector <int> &vec) {
 }
 
 int main() {
-  vector <int> data;
+  vector<int> data;
 
   return 0;
 }
