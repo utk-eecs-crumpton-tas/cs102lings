@@ -1,0 +1,23 @@
+Enter a command ('quit' to quit): Pushed back 1.0000
+Enter a command ('quit' to quit): Pushed back 2.0000
+Enter a command ('quit' to quit): Pushed back 3.0000
+Enter a command ('quit' to quit): Pushed back 4.0000
+Enter a command ('quit' to quit): Pushed back 5.0000
+Enter a command ('quit' to quit): Pushed back 6.0000
+Enter a command ('quit' to quit): Pushed back 7.0000
+Enter a command ('quit' to quit): Pushed back 8.0000
+Enter a command ('quit' to quit): Pushed back 9.0000
+Enter a command ('quit' to quit): Pushed back 10.0000
+Enter a command ('quit' to quit): 10
+Enter a command ('quit' to quit): Value at 9 = 10.0000
+Enter a command ('quit' to quit): [000] = 1.0000
+[001] = 2.0000
+[002] = 3.0000
+[003] = 4.0000
+[004] = 5.0000
+[005] = 6.0000
+[006] = 7.0000
+[007] = 8.0000
+[008] = 9.0000
+[009] = 10.0000
+Enter a command ('quit' to quit): 

@@ -1,0 +1,2 @@
+Enter a command ('quit' to quit): Value at 0 = Invalid index #0
+Enter a command ('quit' to quit): 

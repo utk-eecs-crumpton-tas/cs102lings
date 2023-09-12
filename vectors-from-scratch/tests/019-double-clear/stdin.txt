@@ -1,0 +1,6 @@
+size
+clear
+size
+clear
+size
+quit

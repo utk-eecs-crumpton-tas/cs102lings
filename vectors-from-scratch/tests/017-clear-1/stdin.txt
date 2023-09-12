@@ -1,0 +1,4 @@
+size
+clear
+size
+quit

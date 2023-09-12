@@ -1,0 +1,19 @@
+City,State,Altitude (ft)
+Leadville,CO,10151
+Breckenridge,CO,9600
+Aspen,CO,8000
+Santa Fe,NM,7199
+Park City,UT,7000
+Flagstaff,AZ,6910
+Big Bear Lake,CA,6752
+Cheyenne,WY,6062
+Golden,CO,5675
+Beech Mountain,NC,5506
+Denver,CO,5280
+Fort Davis,TX,4892
+Bozeman,MT,4820
+Salt Lake City,UT,4226
+Moab,UT,4026
+Banner Elk,NC,3701
+Bend,OR,3623
+Billings,MT,3123

@@ -1,0 +1,7 @@
+Enter a command ('quit' to quit): Enter a command ('quit' to quit): SET: 99 = 100.0000
+Enter a command ('quit' to quit): Value at 99 = 100.0000
+Enter a command ('quit' to quit): 100
+Enter a command ('quit' to quit): Enter a command ('quit' to quit): 0
+Enter a command ('quit' to quit): Value at 99 = Invalid index #99
+Enter a command ('quit' to quit): Vector is empty.
+Enter a command ('quit' to quit): 

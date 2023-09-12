@@ -1,0 +1,21 @@
+size
+print
+clear
+print
+set 0 1
+set 0 2
+set 0 3
+push_back 4
+push_back 5
+push_back 6
+push_back 7
+push_back 8
+push_back 9
+push_back 10
+size
+get 9
+print
+resize 3
+get 2
+print
+quit

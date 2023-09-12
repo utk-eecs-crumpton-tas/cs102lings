@@ -1,0 +1,5 @@
+Enter a command ('quit' to quit): Pushed back 1.0000
+Enter a command ('quit' to quit): 1
+Enter a command ('quit' to quit): Value at 0 = 1.0000
+Enter a command ('quit' to quit): [000] = 1.0000
+Enter a command ('quit' to quit): 

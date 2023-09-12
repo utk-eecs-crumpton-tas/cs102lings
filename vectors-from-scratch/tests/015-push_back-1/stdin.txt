@@ -1,0 +1,5 @@
+push_back 1
+size
+get 0
+print
+quit

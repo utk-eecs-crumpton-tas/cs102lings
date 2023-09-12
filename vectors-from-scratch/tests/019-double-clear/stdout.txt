@@ -1,0 +1,4 @@
+Enter a command ('quit' to quit): 0
+Enter a command ('quit' to quit): Enter a command ('quit' to quit): 0
+Enter a command ('quit' to quit): Enter a command ('quit' to quit): 0
+Enter a command ('quit' to quit): 

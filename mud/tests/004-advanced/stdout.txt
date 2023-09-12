@@ -1,0 +1,230 @@
+> Room #0
+You are at the start. Your journey begins..
+
+Exits: s
+> You moved SOUTH.
+> Room #5
+You're near the start.
+
+Exits: n e
+> You moved EAST.
+> Room #6
+There are many passageways here.
+It would be easy to get lost...
+
+Exits: n s e w
+> You moved NORTH.
+> Room #1
+You see a portrait of Dr. Marz hanging on the wall. What could it mean?
+
+Exits: s
+> You can't go WEST!
+> You can't go NORTH!
+> You can't go EAST!
+> You moved SOUTH.
+> Room #6
+There are many passageways here.
+It would be easy to get lost...
+
+Exits: n s e w
+> You moved EAST.
+> Room #7
+You hear a faint buzzing noise
+
+Exits: e w
+> You moved EAST.
+> Room #8
+Have I been here before?
+
+Exits: e w
+> You moved EAST.
+> Room #9
+Nothing remarkable.
+
+Exits: n w
+> You moved NORTH.
+> Room #4
+this is room 4s description
+
+Exits: s w
+> You moved WEST.
+> Room #3
+A dirty hall with cockroaches crawling around. Is this a student apartment complex?
+
+Exits: e w
+> You moved WEST.
+> Room #2
+There seem to be some animal droppings in the corner. Gross.
+
+Exits: e
+> You can't go SOUTH!
+> You can't go WEST!
+> You can't go NORTH!
+> You moved EAST.
+> Room #3
+A dirty hall with cockroaches crawling around. Is this a student apartment complex?
+
+Exits: e w
+> You moved EAST.
+> Room #4
+this is room 4s description
+
+Exits: s w
+> You moved SOUTH.
+> Room #9
+Nothing remarkable.
+
+Exits: n w
+> You moved WEST.
+> Room #8
+Have I been here before?
+
+Exits: e w
+> You moved WEST.
+> Room #7
+You hear a faint buzzing noise
+
+Exits: e w
+> You moved WEST.
+> Room #6
+There are many passageways here.
+It would be easy to get lost...
+
+Exits: n s e w
+> You moved SOUTH.
+> Room #11
+Scrawled in blood on the wall is a message:
+"post on piazza instead of emailing your ta"
+what could it mean?
+
+Exits: n e
+> You moved EAST.
+> Room #12
+A three way junction.
+
+Exits: s e w
+> You moved SOUTH.
+> Room #17
+Someone has been here before you. There are footprints and signs of a struggle.
+
+Exits: n s w
+> You moved WEST.
+> Room #16
+There's a collection of rusty old road signs
+
+Exits: e w
+> You moved WEST.
+> Room #15
+Sitting on a desk is a bowl of soup and some tea
+
+Exits: n e
+> You moved NORTH.
+> Room #10
+There's a mural of WWII propaganda on the wall.
+
+Exits: s
+> You can't go WEST!
+> You can't go NORTH!
+> You can't go EAST!
+> You moved SOUTH.
+> Room #15
+Sitting on a desk is a bowl of soup and some tea
+
+Exits: n e
+> You moved EAST.
+> Room #16
+There's a collection of rusty old road signs
+
+Exits: e w
+> You moved EAST.
+> Room #17
+Someone has been here before you. There are footprints and signs of a struggle.
+
+Exits: n s w
+> You moved SOUTH.
+> Room #22
+There's a wooden chair leaned against the wall.
+
+Exits: n w
+> You moved WEST.
+> Room #21
+You get the feeling you're closer to the exit now.
+
+Exits: e w
+> You moved WEST.
+> Room #20
+There's a pile of old newspapers in the corner.
+
+Exits: e
+> You can't go SOUTH!
+> You can't go WEST!
+> You can't go NORTH!
+> You moved EAST.
+> Room #21
+You get the feeling you're closer to the exit now.
+
+Exits: e w
+> You moved EAST.
+> Room #22
+There's a wooden chair leaned against the wall.
+
+Exits: n w
+> You moved NORTH.
+> Room #17
+Someone has been here before you. There are footprints and signs of a struggle.
+
+Exits: n s w
+> You moved NORTH.
+> Room #12
+A three way junction.
+
+Exits: s e w
+> You moved EAST.
+> Room #13
+There's bread crumbs on the floor.
+
+Exits: s e w
+> You moved EAST.
+> Room #14
+There's a panel on the ceiling but you 
+can't quite reach it.
+
+Exits: s w
+> You moved SOUTH.
+> Room #19
+It's empty
+
+Exits: n
+> You can't go EAST!
+> You can't go SOUTH!
+> You can't go WEST!
+> You moved NORTH.
+> Room #14
+There's a panel on the ceiling but you 
+can't quite reach it.
+
+Exits: s w
+> You moved WEST.
+> Room #13
+There's bread crumbs on the floor.
+
+Exits: s e w
+> You moved SOUTH.
+> Room #18
+There's a trail of crumbs heading south..
+
+Exits: n s
+> You moved SOUTH.
+> Room #23
+There's a draft in here.
+
+Exits: n e
+> You moved EAST.
+> Room #24
+Freedom!!! A door opens to the outside.
+
+Exits: w
+> You can't go NORTH!
+> You can't go EAST!
+> You can't go SOUTH!
+> 

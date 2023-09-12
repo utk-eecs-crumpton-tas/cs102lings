@@ -1,0 +1,11 @@
+resize 5 5
+print
+resize 10 10
+print
+resize 20 20
+print
+resize 40 40
+print
+resize 80 80
+print
+quit
