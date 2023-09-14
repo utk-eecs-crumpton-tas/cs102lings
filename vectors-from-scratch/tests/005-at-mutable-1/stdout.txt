@@ -1,5 +1,0 @@
-Enter a command ('quit' to quit): Invalid index #0
-Enter a command ('quit' to quit): Value at 0 = Invalid index #0
-Enter a command ('quit' to quit): Invalid command '1'
-Enter a command ('quit' to quit): Vector is empty.
-Enter a command ('quit' to quit): 

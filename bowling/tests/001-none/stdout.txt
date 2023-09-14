@@ -1,1 +1,0 @@
-Enter player's name (done for no more players): No players were entered.

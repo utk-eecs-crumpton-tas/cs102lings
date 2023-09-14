@@ -1,7 +1,0 @@
-set 1 0
-set 2 0
-set 3 0
-set 4 0
-set 5 0
-set 100 0
-quit

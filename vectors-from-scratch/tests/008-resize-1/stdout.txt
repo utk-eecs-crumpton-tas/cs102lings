@@ -1,2 +1,0 @@
-Enter a command ('quit' to quit): Enter a command ('quit' to quit): [000] = -5.5500
-Enter a command ('quit' to quit): 

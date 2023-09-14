@@ -1,4 +1,0 @@
-set 0 1
-get 0 1
-print
-quit

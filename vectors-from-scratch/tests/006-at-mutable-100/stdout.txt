@@ -1,7 +1,0 @@
-Enter a command ('quit' to quit): Invalid index #1
-Enter a command ('quit' to quit): Invalid index #2
-Enter a command ('quit' to quit): Invalid index #3
-Enter a command ('quit' to quit): Invalid index #4
-Enter a command ('quit' to quit): Invalid index #5
-Enter a command ('quit' to quit): Invalid index #100
-Enter a command ('quit' to quit): 

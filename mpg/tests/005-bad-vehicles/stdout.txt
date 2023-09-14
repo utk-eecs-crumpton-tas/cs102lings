@@ -1,5 +1,0 @@
-Enter command: Unknown command.
-Enter command: Unknown command.
-Enter command: Unknown command.
-Enter command: Fleet has no cars.
-Fleet has no trucks.

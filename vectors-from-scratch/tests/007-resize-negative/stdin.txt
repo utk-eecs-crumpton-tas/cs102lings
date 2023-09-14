@@ -1,3 +1,0 @@
-resize -1
-print
-quit

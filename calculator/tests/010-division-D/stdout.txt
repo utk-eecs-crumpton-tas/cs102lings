@@ -1,1 +1,0 @@
-Enter left operand: Enter operation: Enter right operand: Result = 3

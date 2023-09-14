@@ -1,7 +1,0 @@
-get 1
-get 2
-get 3
-get 4
-get 5
-get 100
-quit

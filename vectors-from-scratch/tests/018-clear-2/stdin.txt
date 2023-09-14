@@ -1,9 +1,0 @@
-resize 100
-set 99 100
-get 99
-size
-clear
-size
-get 99
-print
-quit

@@ -1,2 +1,0 @@
-Enter a command ('quit' to quit): Enter a command ('quit' to quit): Vector is empty.
-Enter a command ('quit' to quit): 

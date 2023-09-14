@@ -1,5 +1,0 @@
-resize 10
-print
-resize 10
-print
-quit

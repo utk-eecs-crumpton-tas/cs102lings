@@ -1,6 +1,0 @@
-resize 100
-size
-resize 1
-size
-print
-quit
