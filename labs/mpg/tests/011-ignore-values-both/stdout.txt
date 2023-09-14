@@ -1,0 +1,6 @@
+Enter command: Enter car's miles: Enter car's gallons: Enter car's gallons: Enter command: Unknown command.
+Enter command: Enter car's miles: Enter car's gallons: Enter car's gallons: Enter command: Unknown command.
+Enter command: Enter truck's miles: Enter truck's gallons: Enter truck's gallons: Enter command: Unknown command.
+Enter command: Enter truck's miles: Enter truck's gallons: Enter truck's gallons: Enter command: Unknown command.
+Enter command: Average car MPG = 10.1771
+Average truck MPG = 10.1771

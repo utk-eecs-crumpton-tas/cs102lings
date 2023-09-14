@@ -1,0 +1,23 @@
+car
+m
+n hello
+o hello hello
+p hello hello hello
+177.25
+m
+n hello
+o hello hello
+p hello hello hello
+22.182
+truck
+m
+n hello
+o hello hello
+p hello hello hello
+177.25
+m
+n hello
+o hello hello
+p hello hello hello
+22.182
+done

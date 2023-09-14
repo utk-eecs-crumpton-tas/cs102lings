@@ -1,0 +1,4 @@
+Enter your first and middle names: Enter your age: Enter your street number, name, and type: Enter your city of birth: 
+Your penname is Birmingham Johnson.
+You will write as a 15 year old.
+Your address is 59 Student Lane.
