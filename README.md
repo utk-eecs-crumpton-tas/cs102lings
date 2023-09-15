@@ -86,7 +86,7 @@ Please commit your changes or stash them before you merge.
 Aborting
 ```
 
-> :warning:
+> **Warning**
 > Do not try to fix this on your own, ask for help from a TA.
 
 ## Writing Assignments and Running the Tests
