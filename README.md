@@ -1,11 +1,27 @@
 # CS102lings
 
-Course materials for UTK cs102
+Labs templates and tests for UTK CS102
 
 Inspired by:
 
 - [rustlings](https://github.com/rust-lang/rustlings)
 - [ziglings](https://github.com/ratfactor/ziglings)
+
+## Table of Contents
+
+- [CS102lings](#cs102lings)
+  - [Table of Contents](#table-of-contents)
+  - [Setup](#setup)
+  - [Updating](#updating)
+  - [Writing Assignments and Running the Tests](#writing-assignments-and-running-the-tests)
+  - [How the Tests are Structured](#how-the-tests-are-structured)
+  - [Test Output Examples](#test-output-examples)
+    - [Mismatched line `|`](#mismatched-line-)
+    - [Missing line `<`](#missing-line-)
+    - [Extra line `>`](#extra-line-)
+    - [Missing terminating newline `\`](#missing-terminating-newline-)
+  - [Showing More Test Output](#showing-more-test-output)
+  - [Debugging with Tests](#debugging-with-tests)
 
 ## Setup
 
@@ -21,7 +37,62 @@ Change into `cs102lings/labs` with `cd cs102lings/labs` and run `ls` to see the 
 
 This directory will contain templates for all the labs in this course as well as tests to verify your solutions.
 
-## Usage
+## Updating
+
+To check if the cs102lings repository has been updated, run the following command:
+
+```bash
+git status
+```
+
+If it prints the following everything is up to date:
+
+```txt
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+If it prints something like this, there is an update:
+
+```txt
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+```
+
+To update run:
+
+```bash
+git pull
+```
+
+When pulling, if it prints something like this it updated successfully
+
+```txt
+Updating 1a2b3c4..5e6f7g8
+
+Fast-forward
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+If it prints something like this, it was not able to pull changes:
+
+```txt
+error: Your local changes to the following files would be overwritten by merge:
+  README.md
+Please commit your changes or stash them before you merge.
+Aborting
+```
+
+> :warning:
+> Do not try to fix this on your own, ask for help from a TA.
+
+## Writing Assignments and Running the Tests
 
 Change into the directory of the lab, for example penname.
 
@@ -35,15 +106,15 @@ To run the tests for your program, run the following command:
 
 > :note:
 > The script will recompile your program each time you run it, so you don't need to recompile it yourself.
-> The gradescript will create a file in your directory called `lab.bin` which is your compiled program.
+> The tests will create a file in your directory called `lab.bin` which is your compiled program.
 
 ```bash
 bash scripts/test.bash panname.cpp
 ```
 
-## About the Gradescripts
+## How the Tests are Structured
 
-The gradescripts have several components they will check depending on the lab.
+The tests have several components they will check depending on the lab.
 
 Output components
 
@@ -59,11 +130,11 @@ Input components
 
 All files associated with a test can be found in `tests/TEST_NAME/` e.g. `tests/001-absolute-value-operator/`
 
-## Examples
+## Test Output Examples
 
 The tests use the `diff` command to compare your output to the tests. the `|` symbol means the two lines are different. The `>` symbol with output in green means the line is extra in your program. The `<` symbol with output in red means the line is missing is yours. If the lines look the same, then it could be a whitespace issue.
 
-### Mismathced line line `|`
+### Mismatched line `|`
 
 ```txt
 (1/13)  canvas
@@ -181,9 +252,9 @@ Your address is 59 Student Lane.                              / Your address is 
 
 The `/` means your output is missing a newline at the end.
 
-## Showing more output
+## Showing More Test Output
 
-Run the tests with the `--print` flag. Valid options are `input`, 'output`, and `all`.
+Run the tests with the `--print` flag. Valid options are `input`, `output`, and `all`.
 
 `input` will print the `stdin` and `fin` components
 
@@ -234,7 +305,7 @@ your stderr
 cat tests/001-canvas/stderr.tmp.txt
 ```
 
-## Debugging
+## Debugging with Tests
 
 Most of the time, you should be able to print debug information to `cerr` and inspect it with `--print output`.
 

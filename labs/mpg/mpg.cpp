@@ -10,7 +10,7 @@
 
 using namespace std;
 
-/* Error check example
+/* Error check example for reference (delete later)
   while (true) {
     cout << "Enter a value: ";
     if (!(cin >> value)) {
@@ -31,5 +31,6 @@ int main() {
   //! doubles
 
   // TODO
+
   return 0;
 }
