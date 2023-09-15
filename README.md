@@ -2,10 +2,7 @@
 
 Labs templates and tests for UTK CS102
 
-Inspired by:
-
-- [rustlings](https://github.com/rust-lang/rustlings)
-- [ziglings](https://github.com/ratfactor/ziglings)
+Inspired by [rustlings](https://github.com/rust-lang/rustlings) and [ziglings](https://github.com/ratfactor/ziglings)
 
 ## Table of Contents
 
@@ -15,7 +12,7 @@ Inspired by:
   - [Updating](#updating)
   - [Writing Assignments and Running the Tests](#writing-assignments-and-running-the-tests)
   - [How the Tests are Structured](#how-the-tests-are-structured)
-  - [Test Output Examples](#test-output-examples)
+  - [Test Output Examples (and Symbols Meaning)](#test-output-examples-and-symbols-meaning)
     - [Mismatched line `|`](#mismatched-line-)
     - [Missing line `<`](#missing-line-)
     - [Extra line `>`](#extra-line-)
@@ -130,7 +127,7 @@ Input components
 
 All files associated with a test can be found in `tests/TEST_NAME/` e.g. `tests/001-absolute-value-operator/`
 
-## Test Output Examples
+## Test Output Examples (and Symbols Meaning)
 
 The tests use the `diff` command to compare your output to the tests. the `|` symbol means the two lines are different. The `>` symbol with output in green means the line is extra in your program. The `<` symbol with output in red means the line is missing is yours. If the lines look the same, then it could be a whitespace issue.
 
