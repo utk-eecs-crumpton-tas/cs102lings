@@ -94,10 +94,10 @@ Aborting
 Change into the directory of the lab, for example penname.
 
 ```bash
-cd cs102lings/labs/panname
+cd cs102lings/labs/penname
 ```
 
-`panname.cpp` is the template for the lab. Write your program here.
+`penname.cpp` is the template for the lab. Write your program here.
 
 To run the tests for your program, run the following command:
 
@@ -106,7 +106,7 @@ To run the tests for your program, run the following command:
 > The tests will create a file in your directory called `lab.bin` which is your compiled program.
 
 ```bash
-bash scripts/test.bash panname.cpp
+bash scripts/test.bash penname.cpp
 ```
 
 ## How the Tests are Structured
@@ -260,7 +260,7 @@ Run the tests with the `--print` flag. Valid options are `input`, `output`, and 
 `all` will print all components
 
 ```bash
-bash scripts/test.bash panname.cpp --print all
+bash scripts/test.bash penname.cpp --print all
 ```
 
 ```txt
