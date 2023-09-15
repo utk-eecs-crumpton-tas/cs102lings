@@ -16,7 +16,7 @@ Inspired by [rustlings](https://github.com/rust-lang/rustlings) and [ziglings](h
     - [Mismatched line `|`](#mismatched-line-)
     - [Missing line `<`](#missing-line-)
     - [Extra line `>`](#extra-line-)
-    - [Missing terminating newline `\`](#missing-terminating-newline-)
+    - [Missing terminating newline `/`](#missing-terminating-newline-)
   - [Showing More Test Output](#showing-more-test-output)
   - [Debugging with Tests](#debugging-with-tests)
 
@@ -220,7 +220,7 @@ bash scripts/test.bash <source-file> --print [input|output|all]
 
 This (typically green) arrows, mean your program is printing an extra line.
 
-### Missing terminating newline `\`
+### Missing terminating newline `/`
 
 ```txt
 (1/13)  canvas
