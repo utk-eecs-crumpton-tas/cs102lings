@@ -101,9 +101,10 @@ cd cs102lings/labs/panname
 
 To run the tests for your program, run the following command:
 
-[!NOTE]  
+[!NOTE]\
 The script will recompile your program each time you run it, so you don't need to recompile it yourself.
-The tests will create a file in your directory called `lab.bin` which is your compiled program.
+
+<!-- The tests will create a file in your directory called `lab.bin` which is your compiled program. -->
 
 ```bash
 bash scripts/test.bash panname.cpp
