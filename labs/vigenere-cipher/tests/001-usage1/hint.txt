@@ -1,0 +1,2 @@
+Remember argv[0] stores the name if the command ran,
+and can be used in the usage error

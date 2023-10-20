@@ -1,0 +1,1 @@
+usage: ./vigenereCipher inputFilename outputFilename key [e/d]
