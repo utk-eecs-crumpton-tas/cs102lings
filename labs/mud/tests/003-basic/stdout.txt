@@ -1,0 +1,9 @@
+> Room #0
+You are at the start. Your journey begins..
+
+Exits: s
+> You can't go NORTH!
+> You can't go EAST!
+> You can't go WEST!
+> You moved SOUTH.
+> 
