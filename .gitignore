@@ -1,3 +1,4 @@
 *.bin
 *.out
 *.tmp.txt
+__pycache__
