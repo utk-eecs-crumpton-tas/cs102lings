@@ -1,8 +1,0 @@
-Enter a salary: $-----------------------------------
-Yearly Salary:           $800000.00
-Social Security Tax:     $ 49600.00
-Medicare Tax:            $ 11600.00
-Income Tax:              $258955.00
------------------------------------
-Take Home Salary:        $479845.00
-Monthly Take Home Pay:   $ 39987.08

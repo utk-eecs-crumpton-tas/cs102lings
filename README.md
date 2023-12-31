@@ -17,8 +17,11 @@ Inspired by [rustlings](https://github.com/rust-lang/rustlings) and [ziglings](h
     - [Missing line `<`](#missing-line-)
     - [Extra line `>`](#extra-line-)
     - [Missing terminating newline `/`](#missing-terminating-newline-)
+    - [Extra terminating newline `\`](#extra-terminating-newline-)
   - [Showing More Test Output](#showing-more-test-output)
-  - [Debugging with Tests](#debugging-with-tests)
+  - [Debugging with the Script](#debugging-with-the-script)
+    - [Using print statements](#using-print-statements)
+    - [Using `GDB`](#using-gdb)
 
 ## Setup
 
@@ -105,8 +108,11 @@ To run the tests for your program, run the following command:
 > The script will recompile your program each time you run it, so you don't need to recompile it yourself.
 > The tests will create a file in your directory called `lab.bin` which is your compiled program.
 
+> **Note**
+> Make sure to include the full version number of python `python3.11` not `python` or `python3`
+
 ```bash
-bash scripts/test.bash penname.cpp
+python3.11 scripts/test.py penname.cpp
 ```
 
 ## How the Tests are Structured
@@ -129,7 +135,7 @@ All files associated with a test can be found in `tests/TEST_NAME/` e.g. `tests/
 
 ## Test Output Examples (and Symbols Meaning)
 
-The tests use the `diff` command to compare your output to the tests. the `|` symbol means the two lines are different. The `>` symbol with output in green means the line is extra in your program. The `<` symbol with output in red means the line is missing is yours. If the lines look the same, then it could be a whitespace issue.
+The tests use the `diff` command to compare your output to the tests. the `|` symbol means the two lines are different. The `>` symbol with output in green means the line is extra in your program. The `<` symbol with output in red means the line is missing is yours.
 
 ### Mismatched line `|`
 
@@ -146,12 +152,6 @@ Enter your city of birth:                                       Enter your city 
 Your penname name is Birmingham Johnson.                      | Your penname is Birmingham Johnson.
 You will write as a 15 year old.                                You will write as a 15 year old.
 Your address is 59 Student Lane.                                Your address is 59 Student Lane.
-
-run with
-./lab.bin <tests/001-canvas/stdin.tmp.txt
-
-For more info run with the print flag:
-bash scripts/test.bash <source-file> --print [input|output|all]
 ```
 
 on this line from above `name` is missing
@@ -159,6 +159,8 @@ on this line from above `name` is missing
 ```txt
 Your penname name is Birmingham Johnson.                      | Your penname is Birmingham Johnson.
 ```
+
+If the lines look the same, then it could be a whitespace issue (space or newline character).
 
 ### Missing line `<`
 
@@ -175,12 +177,6 @@ Enter your city of birth:                                       Enter your city 
 Your penname name is Birmingham Johnson.                        Your penname name is Birmingham Johnson.
 You will write as a 15 year old.                                You will write as a 15 year old.
 Your address is 59 Student Lane.                                Your address is 59 Student Lane.
-
-run with
-./lab.bin <tests/001-canvas/stdin.tmp.txt
-
-For more info run with the print flag:
-bash scripts/test.bash <source-file> --print [input|output|all]
 ```
 
 This (typically red) arrow, means a line is missing between the two.
@@ -210,12 +206,6 @@ Enter your city of birth:                                       Enter your city 
 Your penname name is Birmingham Johnson.                        Your penname name is Birmingham Johnson.
 You will write as a 15 year old.                                You will write as a 15 year old.
 Your address is 59 Student Lane.                                Your address is 59 Student Lane.
-
-run with
-./lab.bin <tests/001-canvas/stdin.tmp.txt
-
-For more info run with the print flag:
-bash scripts/test.bash <source-file> --print [input|output|all]
 ```
 
 This (typically green) arrows, mean your program is printing an extra line.
@@ -235,12 +225,6 @@ Enter your city of birth:                                       Enter your city 
 Your penname name is Birmingham Johnson.                        Your penname name is Birmingham Johnson.
 You will write as a 15 year old.                                You will write as a 15 year old.
 Your address is 59 Student Lane.                              / Your address is 59 Student Lane.
-
-run with
-./lab.bin <tests/001-canvas/stdin.tmp.txt
-
-For more info run with the print flag:
-bash scripts/test.bash <source-file> --print [input|output|all]
 ```
 
 ```txt
@@ -249,18 +233,35 @@ Your address is 59 Student Lane.                              / Your address is 
 
 The `/` means your output is missing a newline at the end.
 
+### Extra terminating newline `\`
+
+```txt
+(1/13)  canvas
+  stdout     failed
+
+expected                                                        yours
+Enter your first and middle names:                              Enter your first and middle names:
+Enter your age:                                                 Enter your age:
+Enter your street number, name, and type:                       Enter your street number, name, and type:
+Enter your city of birth:                                       Enter your city of birth:
+
+Your penname name is Birmingham Johnson.                        Your penname name is Birmingham Johnson.
+You will write as a 15 year old.                                You will write as a 15 year old.
+Your address is 59 Student Lane.                              \ Your address is 59 Student Lane.
+```
+
+```txt
+Your address is 59 Student Lane.                              \ Your address is 59 Student Lane.
+```
+
+The `\` means your output has a newline at the end and the solution does not.
+
 ## Showing More Test Output
 
-Run the tests with the `--print` flag. Valid options are `input`, `output`, and `all`.
-
-`input` will print the `stdin` and `fin` components
-
-`output` will print the `stdout`, `stderr`, and `fout` components
-
-`all` will print all components
+Run the tests with the `--print` flag. This will print the `stdin` or `fin` for the failed test if any exists.
 
 ```bash
-bash scripts/test.bash penname.cpp --print all
+python3.11 scripts/test.py penname.cpp --print
 ```
 
 ```txt
@@ -277,34 +278,37 @@ Your penname name is Birmingham Johnson.                      | Your penname is 
 You will write as a 15 year old.                                You will write as a 15 year old.
 Your address is 59 Student Lane.                                Your address is 59 Student Lane.
 
-run with
-./lab.bin <tests/001-canvas/stdin.tmp.txt
+your stderr
+cat tests/001-canvas/stderr.tmp.txt
+Debug informatoin!
+
+command
+./lab.bin  < tests/001-canvas/stdin.txt
 
 stdin
-cat tests/001-canvas/stdin.tmp.txt
+cat tests/001-canvas/stdin.txt
 Johnathan Student
 31
 222 Johnson Lane
 Birmingham
-
-your stdout
-cat tests/001-canvas/stdout.tmp.txt
-Enter your first and middle names:
-Enter your age:
-Enter your street number, name, and type:
-Enter your city of birth:
-
-Your penname is Birmingham Johnson.
-You will write as a 15 year old.
-Your address is 59 Student Lane.
-
-your stderr
-cat tests/001-canvas/stderr.tmp.txt
 ```
 
-## Debugging with Tests
+This is the `stdin` component printed for this test.
 
-Most of the time, you should be able to print debug information to `cerr` and inspect it with `--print output`.
+```txt
+stdin
+cat tests/001-canvas/stdin.txt
+Johnathan Student
+31
+222 Johnson Lane
+Birmingham
+```
+
+## Debugging with the Script
+
+### Using print statements
+
+Most of the time, you should be able to print debug information to `cerr`. The scripts will automatically print anything written to `cerr` if it detects anything.
 
 Debug statement:
 
@@ -326,38 +330,87 @@ Your penname name is Birmingham Johnson.                      | Your penname is 
 You will write as a 15 year old.                                You will write as a 15 year old.
 Your address is 59 Student Lane.                                Your address is 59 Student Lane.
 
-run with
-./lab.bin <tests/001-canvas/stdin.tmp.txt
-
-stdin
-cat tests/001-canvas/stdin.tmp.txt
-Johnathan Student
-31
-222 Johnson Lane
-Birmingham
-
-your stdout
-cat tests/001-canvas/stdout.tmp.txt
-Enter your first and middle names:
-Enter your age:
-Enter your street number, name, and type:
-Enter your city of birth:
-
-Your penname is Birmingham Johnson.
-You will write as a 15 year old.
-Your address is 59 Student Lane.
-
 your stderr
 cat tests/001-canvas/stderr.tmp.txt
 Debug informatoin!
 ```
 
-Noticed the `Debug information!` line in the `stderr` section.
+Noticed the `Debug information!` line in the `your stderr` section.
 
-You can see how the lab was run and run by itself under the run with section:
+### Using `GDB`
+
+The scripts include a debug option you can invoke with the `--debug` flag
 
 ```bash
-./lab.bin <tests/001-canvas/stdin.tmp.txt
+python3.11 scripts/test.py penname.cpp --debug
 ```
 
-Copy, paste, and run this section into the command line to run the test by itself.
+```txt
+(1/13)  canvas
+  stdout     failed
+
+expected                                                        yours
+Enter your first and middle names:                              Enter your first and middle names:
+Enter your age:                                                 Enter your age:
+Enter your street number, name, and type:                       Enter your street number, name, and type:
+Enter your city of birth:                                       Enter your city of birth:
+
+Your penname name is Birmingham Johnson.                      | Your penname is Birmingham Johnson.
+You will write as a 15 year old.                                You will write as a 15 year old.
+Your address is 59 Student Lane.                                Your address is 59 Student Lane.
+
+command
+./lab.bin  < tests/001-canvas/stdin.txt
+
+To view the test input run with the print flag
+python3.11 scripts/test.py source_file --print
+
+debug: break
+Pausing execution at the start of the program
+
+q|quit to exit
+b|break to set a breakpoint
+c|continue to resume execution normally
+n|next to go to the next line, skipping function calls
+s|step to go to the next line, entering function calls
+fin|finish to return from the current function
+l|list to print the next 10 lines
+p|print [variable] to print a variable
+bt|backtrace to print the previous function calls
+h|help [command] print help or help for a command
+enter to repeat the previous command
+
+GNU gdb (GDB) Fedora Linux 13.2-6.fc38
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from lab.bin...
+Breakpoint 1 at 0x4011d2: file penname-gradescript-example.cpp, line 6.
+Starting program: /workspaces/grading/labs/penname/lab.bin < tests/001-canvas/stdin.txt
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.fedoraproject.org/>
+Enable debuginfod for this session? (y or [n])
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+
+Breakpoint 1, main () at penname-gradescript-example.cpp:6
+6           string first_name;
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.37-13.fc38.x86_64
+(gdb)
+```
+
+This will attach an interactive gdb instance you can use to inspect and step through your program.

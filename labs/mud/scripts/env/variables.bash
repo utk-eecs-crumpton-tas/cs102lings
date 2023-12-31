@@ -1,2 +1,0 @@
-IS_LEAK_CHECK=true
-SPLIT_LINE_ON='> '
