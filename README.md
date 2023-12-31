@@ -130,12 +130,13 @@ Input components
 
 - `stdin` provides input to `cin`
 - `fin` provides input to `ifstream`
+- `arguments` the command line arguments that will be passed to the input program
 
 All files associated with a test can be found in `tests/TEST_NAME/` e.g. `tests/001-absolute-value-operator/`
 
 ## Test Output Examples (and Symbols Meaning)
 
-The tests use the `diff` command to compare your output to the tests. the `|` symbol means the two lines are different. The `>` symbol with output in green means the line is extra in your program. The `<` symbol with output in red means the line is missing is yours.
+The tests use the `diff -y` command to compare your output to the tests. the `|` symbol means the two lines are different. The `>` symbol with output in green means the line is extra in your program. The `<` symbol with output in red means the line is missing is yours.
 
 ### Mismatched line `|`
 
@@ -396,20 +397,14 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from lab.bin...
-Breakpoint 1 at 0x4011d2: file penname-gradescript-example.cpp, line 6.
-Starting program: /workspaces/grading/labs/penname/lab.bin < tests/001-canvas/stdin.txt
+Breakpoint 1 at 0x4011d2: file penname.cpp, line 6.
+Starting program: lab.bin < tests/001-canvas/stdin.txt
 
-This GDB supports auto-downloading debuginfo from the following URLs:
-  <https://debuginfod.fedoraproject.org/>
-Enable debuginfod for this session? (y or [n])
-Debuginfod has been disabled.
-To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
-[Thread debugging using libthread_db enabled]
+Thread debugging using libthread_db enabled
 Using host libthread_db library "/lib64/libthread_db.so.1".
 
 Breakpoint 1, main () at penname-gradescript-example.cpp:6
 6           string first_name;
-Missing separate debuginfos, use: dnf debuginfo-install glibc-2.37-13.fc38.x86_64
 (gdb)
 ```
 
