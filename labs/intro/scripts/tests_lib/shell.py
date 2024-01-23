@@ -5,6 +5,8 @@ from typing import IO, Any
 from .files import write_file
 from .config import BIN_FILENAME
 
+CPP_VERSION = "c++11"
+
 
 def shell(
     command: str,
@@ -54,12 +56,12 @@ def cat(path: Path):
 
 
 def compile_program(source_file: Path):
-    arguments = "-std=c++17 -Wall -Wextra -g -O0"
+    arguments = f"-std={CPP_VERSION} -Wall -Wextra -g -O0"
     return shell(f"g++ {arguments} -o {BIN_FILENAME} {source_file}") == 0
 
 
 def check_compiler_warning(source_file: Path):
-    arguments = "-std=c++17 -Wall -Wextra -Werror"
+    arguments = f"-std={CPP_VERSION} -Wall -Wextra -Werror -Wno-sign-compare"
     return (
         shell(
             f"g++ {arguments} -o {BIN_FILENAME} {source_file}",
