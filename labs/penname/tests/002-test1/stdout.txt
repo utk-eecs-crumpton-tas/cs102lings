@@ -1,0 +1,4 @@
+Enter your first and middle names: Enter your age: Enter your street number, name, and type: Enter your city of birth: 
+Your penname name is Pleasantville Main.
+You will write as a 117 year old.
+Your address is 145 Doe Street.
