@@ -17,26 +17,30 @@ using namespace std;
 
 // You can declare global constants for your salary brackets here
 //! Remember, globals that are not const are a formatting error
+// (globals, aka variables defined outside of main)
 const double MINIMUM_WAGE = 15080;
 const double BRACKET1 = 10275;
 const double BRACKET1_RATE = 0.10;
-// etc.
+// TODO: add the rest!
 
 int main() {
-
     double salary;
     cout << "Enter a salary: $";
     cin >> salary;
 
     // Handling an error
-    if (salary <= MINIMUM_WAGE) {
+    if (/* TODO: */) {
         // print an error message to cerr (not cout!)
         // cerr is like cout but for errors
-        cerr << "This is less than minimum wage for a yearly salary." << endl;
-        return 1; // exit with an error, non-zero exit code means error
+        cerr << "TODO!" << endl;
+        return /* TODO */; // exit with an error, non-zero exit code means error
     }
 
     // TODO: Calculate the take home pay for the given salary
+    // - if you find you are repeating yourself, try another way!
+    // - You can solve this using the constants defined above only once or
+    //   twice.
+    // - Do not define code to print your report more than once!!
 
     // Examples of output formatting (delete these)
     // how to left justify by 9 and print 2 sig figs with printf
@@ -55,6 +59,7 @@ int main() {
     return 0;
 }
 
-// Remember to check your calculations and output with the gradescripts!
-// There are 6 brackets, each calculation is worth 5 points (tests 2-7)
-// Calculations that are slightly off are only half credit! (2.5 points)
+// There are 6 brackets, each correct calculations at each bracket is worth 5
+// points (tests 2-14)
+// Calculations that are slightly off are only half credit!
+// (2.5 points)
