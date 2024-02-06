@@ -1,4 +1,5 @@
 *.bin
 *.out
 *.tmp.txt
+*.dSYM
 __pycache__
