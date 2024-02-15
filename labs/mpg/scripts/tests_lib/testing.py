@@ -1,7 +1,5 @@
-from calendar import c
 import re
 from pathlib import Path
-from subprocess import DEVNULL
 from sys import argv
 from typing import LiteralString
 from .files import read_file, write_file
@@ -54,7 +52,7 @@ def run_program(
             indent=1,
             end="\n\n",
         )
-        return False
+        exit(ExitCodes.TIMEOUT.value)
 
     is_error = exit_status != 0
     is_expected_error = expected_exit_status != 0

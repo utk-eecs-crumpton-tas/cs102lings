@@ -98,13 +98,11 @@ class ScriptConfig:
 
 
 @overload
-def parse_script_config(is_print_help: Literal[True]) -> None:
-    ...
+def parse_script_config(is_print_help: Literal[True]) -> None: ...
 
 
 @overload
-def parse_script_config(is_print_help: Literal[False] = False) -> ScriptConfig:
-    ...
+def parse_script_config(is_print_help: Literal[False] = False) -> ScriptConfig: ...
 
 
 def parse_script_config(is_print_help=False):
@@ -161,7 +159,7 @@ def parse_script_config(is_print_help=False):
         "-t",
         "--timeout",
         type=str,
-        default="10s",
+        default="5s",
         help="Timeout for each test. Default: 10s",
     )
     parser.add_argument(
