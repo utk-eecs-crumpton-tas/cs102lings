@@ -49,10 +49,9 @@ def run_program(
             f"timeout: Program runtime exceeded {CODE_STYLE}{timeout_duration}{RESET}",
             "Check for infinite loops or increase the timeout with the --timeout flag",
             f"Example: {CODE_STYLE}--timeout 10s{RESET}",
-            indent=1,
             end="\n\n",
         )
-        exit(ExitCodes.TIMEOUT.value)
+        return False
 
     is_error = exit_status != 0
     is_expected_error = expected_exit_status != 0
@@ -60,7 +59,6 @@ def run_program(
     if is_expected_error and not is_error:
         print_error(
             "Expected non-zero exit status",
-            indent=1,
             end="\n\n",
         )
         return False
@@ -68,7 +66,6 @@ def run_program(
     if not is_expected_error and is_error:
         print_error(
             f"Received unexpected non-zero exit status: {CODE_STYLE}{exit_status}{RESET}",
-            indent=1,
         )
         return False
 
@@ -105,9 +102,7 @@ def diff_output(
 
     if not user_output_path.exists():
         print_error(
-            "Expected output file does not exist",
-            f"{CODE_STYLE}{user_output_path}{RESET}",
-            indent=1,
+            f"Expected output file does not exist: {CODE_STYLE}{user_output_path}{RESET}",
             end="\n\n",
         )
         return False
@@ -149,7 +144,6 @@ def run_leak_check(
     if not command_exists("valgrind"):
         print_error(
             f"{CODE_STYLE}valgrind{RESET} is not installed",
-            indent=1,
             end="\n\n",
         )
         return False
@@ -305,7 +299,7 @@ def print_test_summary(
     fin_path: Path,
 ):
     print(f"{TEST_INFO_STYLE}command{RESET}")
-    stdin = f" < {user_stdin_path}" if user_stdin_path.exists() else ""
+    stdin = f" <{user_stdin_path}" if user_stdin_path.exists() else ""
     print(f"{CODE_STYLE}{command}{stdin}{RESET}")
     print()
 
@@ -397,7 +391,11 @@ def run_test(
     solution_exit_status = int(read_file(test_path / "exit-status.txt"))
 
     program_arguments = read_file(arguments_path) if arguments_path.exists() else ""
-    command_with_arguments = f"./{BIN_FILENAME} {program_arguments}"
+    command_with_arguments = (
+        f"./{BIN_FILENAME} {program_arguments}"
+        if program_arguments
+        else f"./{BIN_FILENAME}"
+    )
 
     program_is_passed = run_program(
         command=command_with_arguments,
