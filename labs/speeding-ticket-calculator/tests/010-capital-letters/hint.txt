@@ -1,0 +1,1 @@
+Make sure your switch statement handles both lowercase and capital letters

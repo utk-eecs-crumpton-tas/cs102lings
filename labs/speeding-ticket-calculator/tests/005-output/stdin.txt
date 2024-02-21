@@ -1,0 +1,4 @@
+tests/005-output/fin.txt
+tests/005-output/fout.tmp.txt
+1 1 1000
+12 31 5000

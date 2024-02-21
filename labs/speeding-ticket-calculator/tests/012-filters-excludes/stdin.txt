@@ -1,0 +1,4 @@
+tests/012-filters-excludes/fin.txt
+tests/012-filters-excludes/fout.tmp.txt
+7 2 2017
+8 13 2018
