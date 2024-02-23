@@ -305,7 +305,7 @@ def print_test_summary(
 
     print_test_file("hint", hint_path)
 
-    if user_stdin_path.exists() and fin_path.exists():
+    if not user_stdin_path.exists() and not fin_path.exists():
         return
 
     if not is_print:
