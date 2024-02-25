@@ -72,17 +72,29 @@ def run_program(
     return True
 
 
-def format_stdout(output_path: Path, split_stdout_on: str | None):
+def format_output(
+    output_path: Path, split_stdout_on: str | None, is_show_whitespaces: bool
+):
     """Adds back the newlines removed by piping in stdin"""
-    if split_stdout_on is None or not split_stdout_on:
+    is_split = split_stdout_on is not None and split_stdout_on
+    if not is_split and not is_show_whitespaces:
         return output_path
 
     formatted_output_path = output_path.parent / f"{output_path.stem}.formatted.tmp.txt"
 
     output = read_file(output_path)
 
-    formatted_output = str(re.sub(split_stdout_on, r"\g<0>\n", output))
-    write_file(formatted_output_path, formatted_output)
+    formatted_output = (
+        str(re.sub(split_stdout_on, r"\g<0>\n", output))
+        if split_stdout_on is not None and split_stdout_on
+        else output
+    )
+
+    replaced_output = (
+        formatted_output.replace(" ", "·") if is_show_whitespaces else formatted_output
+    )
+
+    write_file(formatted_output_path, replaced_output)
 
     return formatted_output_path
 
@@ -93,6 +105,7 @@ def diff_output(
     user_output_path: Path,
     is_verbose: bool,
     split_stdout_on: str | None,
+    is_show_whitespaces: bool,
     is_no_color: bool,
 ):
     if not solution_output_path.exists():
@@ -112,13 +125,15 @@ def diff_output(
     print_result(component_name, is_passed)
 
     if not is_passed or is_verbose:
-        formatted_solution_output_path = format_stdout(
-            solution_output_path,
-            split_stdout_on,
+        formatted_solution_output_path = format_output(
+            output_path=solution_output_path,
+            split_stdout_on=split_stdout_on,
+            is_show_whitespaces=is_show_whitespaces,
         )
-        formatted_user_output_path = format_stdout(
-            user_output_path,
-            split_stdout_on,
+        formatted_user_output_path = format_output(
+            output_path=user_output_path,
+            split_stdout_on=split_stdout_on,
+            is_show_whitespaces=is_show_whitespaces,
         )
 
         print()
@@ -411,6 +426,7 @@ def run_test(
         user_output_path=user_stdout_path,
         is_verbose=script_config.is_verbose,
         split_stdout_on=script_config.split_stdout_on,
+        is_show_whitespaces=script_config.is_show_whitespace,
         is_no_color=script_config.is_no_diff_color,
     )
     stderr_is_passed = diff_output(
@@ -419,6 +435,7 @@ def run_test(
         user_output_path=user_stderr_path,
         is_verbose=script_config.is_verbose,
         split_stdout_on=None,
+        is_show_whitespaces=script_config.is_show_whitespace,
         is_no_color=script_config.is_no_diff_color,
     )
     fout_is_passed = diff_output(
@@ -427,6 +444,7 @@ def run_test(
         user_output_path=user_fout_path,
         is_verbose=script_config.is_verbose,
         split_stdout_on=None,
+        is_show_whitespaces=script_config.is_show_whitespace,
         is_no_color=script_config.is_no_diff_color,
     )
     leak_check_is_passed = run_leak_check(

@@ -57,6 +57,7 @@ class ScriptConfig:
     source_file: Path
     is_clean: bool
     is_verbose: bool
+    is_show_whitespace: bool
     is_no_diff_color: bool
     is_skip_leak_check: bool
     is_skip_fstream_check: bool
@@ -73,6 +74,7 @@ class ScriptConfig:
         self.source_file = validate(cli_arguments.source_file, Path)
         self.is_clean = validate(cli_arguments.clean, bool)
         self.is_verbose = validate(cli_arguments.verbose, bool)
+        self.is_show_whitespace = validate(cli_arguments.show_whitespace, bool)
         self.is_no_diff_color = validate(cli_arguments.no_diff_color, bool)
         self.is_skip_leak_check = validate(cli_arguments.skip_leak_check, bool)
         self.is_skip_fstream_check = validate(cli_arguments.skip_fstream_check, bool)
@@ -122,6 +124,12 @@ def parse_script_config(is_print_help=False):
         "--verbose",
         action="store_true",
         help="Display test summary for passed tests",
+    )
+    parser.add_argument(
+        "-w",
+        "--show-whitespace",
+        action="store_true",
+        help="Replace spaces with visible characters",
     )
     parser.add_argument(
         "--no-diff-color",
