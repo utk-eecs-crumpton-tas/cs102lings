@@ -39,13 +39,13 @@ def shell(
     if stdout_is_path:
         write_file(
             stdout,
-            subprocess.stdout.decode(encoding="ascii", errors="replace"),
+            subprocess.stdout.decode(encoding="utf-8", errors="replace"),
         )
 
     if stderr_is_path:
         write_file(
             stderr,
-            subprocess.stderr.decode(encoding="ascii", errors="replace"),
+            subprocess.stderr.decode(encoding="utf-8", errors="replace"),
         )
 
     return subprocess.returncode
