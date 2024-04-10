@@ -1,0 +1,1 @@
+tests/006-full-dungeon/fin.txt
