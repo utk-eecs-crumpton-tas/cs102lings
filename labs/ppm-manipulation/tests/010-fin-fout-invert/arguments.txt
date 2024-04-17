@@ -1,0 +1,1 @@
+tests/010-fin-fout-invert/fin.txt tests/010-fin-fout-invert/fout.tmp.txt I

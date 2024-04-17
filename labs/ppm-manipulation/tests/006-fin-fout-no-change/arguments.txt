@@ -1,0 +1,1 @@
+tests/006-fin-fout-no-change/fin.txt tests/006-fin-fout-no-change/fout.tmp.txt

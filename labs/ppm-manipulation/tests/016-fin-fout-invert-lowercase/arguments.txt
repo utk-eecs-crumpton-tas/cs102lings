@@ -1,0 +1,1 @@
+tests/016-fin-fout-invert-lowercase/fin.txt tests/016-fin-fout-invert-lowercase/fout.tmp.txt i
