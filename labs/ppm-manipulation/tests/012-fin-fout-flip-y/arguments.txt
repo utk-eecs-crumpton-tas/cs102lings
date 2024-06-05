@@ -1,1 +1,0 @@
-tests/012-fin-fout-flip-y/fin.txt tests/012-fin-fout-flip-y/fout.tmp.txt Y

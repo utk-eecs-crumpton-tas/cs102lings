@@ -1,1 +1,0 @@
-tests/020-fin-fout-invert-small-max-intensity/fin.txt tests/020-fin-fout-invert-small-max-intensity/fout.tmp.txt I

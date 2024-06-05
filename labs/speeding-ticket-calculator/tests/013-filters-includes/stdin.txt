@@ -1,4 +1,0 @@
-tests/013-filters-includes/fin.txt
-tests/013-filters-includes/fout.tmp.txt
-6 4 2015
-7 3 2017

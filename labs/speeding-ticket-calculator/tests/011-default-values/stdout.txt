@@ -1,1 +1,0 @@
-Enter a ticket file: Enter a report file: Enter report start date (mm dd yyyy): Enter report end date   (mm dd yyyy): 

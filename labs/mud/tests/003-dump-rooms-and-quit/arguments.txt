@@ -1,1 +1,0 @@
-tests/003-dump-rooms-and-quit/fin.txt
