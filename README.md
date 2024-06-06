@@ -28,7 +28,7 @@ Inspired by [rustlings](https://github.com/rust-lang/rustlings) and [ziglings](h
 Run the following command to clone the repository:
 
 ```bash
-git clone https://github.com/utk-eecs-crumpton-tas/cs102lings.git
+git clone https://github.com/utk-eecs-crumpton-tas/cs102lings.git ~/cs102lings
 ```
 
 You should now have a directory called `cs102lings` verify with `ls`
