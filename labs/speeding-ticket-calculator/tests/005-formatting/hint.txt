@@ -1,0 +1,2 @@
+Just focus on the fine calculation and formatting the output.
+Don't worry about the date filtering or any of the edge cases yet.

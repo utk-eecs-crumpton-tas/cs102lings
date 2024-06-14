@@ -1,0 +1,4 @@
+tests/010-capital-letters/fin.txt
+tests/010-capital-letters/fout.tmp.txt
+1 1 1000
+12 31 5000
