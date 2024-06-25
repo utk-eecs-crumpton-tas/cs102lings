@@ -1,0 +1,1 @@
+usage: ./vigenere inputFile outputFile key [e/d]

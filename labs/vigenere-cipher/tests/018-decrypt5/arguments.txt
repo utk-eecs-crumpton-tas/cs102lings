@@ -1,0 +1,1 @@
+tests/018-decrypt5/fin.txt tests/018-decrypt5/fout.tmp.txt crumpton d

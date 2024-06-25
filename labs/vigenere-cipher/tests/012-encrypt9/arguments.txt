@@ -1,0 +1,1 @@
+tests/012-encrypt9/fin.txt tests/012-encrypt9/fout.tmp.txt vols e

@@ -1,0 +1,1 @@
+tests/007-encrypt4/fin.txt tests/007-encrypt4/fout.tmp.txt lemon e
