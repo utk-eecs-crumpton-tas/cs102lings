@@ -1,0 +1,1 @@
+tests/008-bad-inputs-selection/fin.txt

@@ -1,0 +1,1 @@
+tests/007-bad-inputs-insertion/fin.txt

@@ -1,0 +1,10 @@
+To get the significant group on the other side, i counts from 31..0,
+using simple arithmetic, you wanna modify i in your i % spacing expression
+so that i goes from 1..32.
+i  -> i'
+31 -> 1
+30 -> 2
+29 -> 3
+...
+1 -> 31
+0 -> 32
