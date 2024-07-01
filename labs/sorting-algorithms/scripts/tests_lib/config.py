@@ -167,7 +167,7 @@ def parse_script_config(is_print_help=False):
         "-t",
         "--timeout",
         type=str,
-        default="5s",
+        default="3s",
         help="Timeout for each test. Default: 10s",
     )
     parser.add_argument(
