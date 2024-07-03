@@ -1,0 +1,1 @@
+tests/030-fin-fout-flip-y-lowercase/fin.txt tests/030-fin-fout-flip-y-lowercase/fout.tmp.txt y

@@ -1,0 +1,1 @@
+tests/031-fin-fout-no-change-small-max-intensity/fin.txt tests/031-fin-fout-no-change-small-max-intensity/fout.tmp.txt

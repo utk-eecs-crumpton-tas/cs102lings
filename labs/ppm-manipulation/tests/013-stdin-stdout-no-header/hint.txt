@@ -1,0 +1,2 @@
+Remember to check if read input returns false in main
+and return 1 if it does.

@@ -1,0 +1,1 @@
+tests/021-fin-fout-comments/fin.txt tests/021-fin-fout-comments/fout.tmp.txt
