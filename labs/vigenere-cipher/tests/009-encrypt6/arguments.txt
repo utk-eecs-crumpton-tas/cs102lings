@@ -1,1 +1,0 @@
-tests/009-encrypt6/fin.txt tests/009-encrypt6/fout.tmp.txt vols e

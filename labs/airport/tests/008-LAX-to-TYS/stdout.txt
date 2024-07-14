@@ -1,8 +1,0 @@
-Airport Network:
-ATL -> Neighbors: LAX, JFK, TYS
-LAX -> Neighbors: ATL, ORD
-JFK -> Neighbors: ATL, ORD, BNA
-ORD -> Neighbors: LAX, JFK
-TYS -> Neighbors: ATL
-BNA -> Neighbors: JFK
-Enter a 3 character airport code for departure: Enter a 3 character airport code for arrival: You cannot fly direct from LAX to TYS.

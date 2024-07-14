@@ -1,1 +1,0 @@
-tests/006-duplicates-insertion/fin.txt

@@ -1,1 +1,0 @@
-tests/012-fin-stdout-no-change/fin.txt -

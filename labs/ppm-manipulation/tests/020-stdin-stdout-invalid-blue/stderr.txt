@@ -1,2 +1,0 @@
-Error: invalid blue channel
-Reading from stdin failed.

@@ -1,1 +1,0 @@
-tests/003-basic-selection/fin.txt

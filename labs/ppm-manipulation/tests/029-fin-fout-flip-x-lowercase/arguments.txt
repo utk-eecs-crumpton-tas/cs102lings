@@ -1,1 +1,0 @@
-tests/029-fin-fout-flip-x-lowercase/fin.txt tests/029-fin-fout-flip-x-lowercase/fout.tmp.txt x

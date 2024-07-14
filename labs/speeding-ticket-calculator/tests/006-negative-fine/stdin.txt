@@ -1,4 +1,0 @@
-tests/006-negative-fine/fin.txt
-tests/006-negative-fine/fout.tmp.txt
-1 1 1000
-12 31 5000

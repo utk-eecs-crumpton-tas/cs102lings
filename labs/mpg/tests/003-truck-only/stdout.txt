@@ -1,2 +1,0 @@
-Enter command: Enter truck's miles: Enter truck's gallons: Enter command: Enter truck's miles: Enter truck's gallons: Enter command: Fleet has no cars.
-Average truck MPG = 6.34661

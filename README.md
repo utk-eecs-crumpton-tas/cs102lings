@@ -18,7 +18,7 @@ Inspired by [rustlings](https://github.com/rust-lang/rustlings) and [ziglings](h
     - [Extra line `>`](#extra-line-)
     - [Missing terminating newline `/`](#missing-terminating-newline-)
     - [Extra terminating newline `\`](#extra-terminating-newline-)
-  - [Showing More Test Output](#showing-more-test-output)
+  - [Viewing Test Input](#viewing-test-input)
   - [Debugging with the Script](#debugging-with-the-script)
     - [Using print statements](#using-print-statements)
     - [Using `GDB`](#using-gdb)
@@ -31,9 +31,9 @@ Run the following command to clone the repository:
 git clone https://github.com/utk-eecs-crumpton-tas/cs102lings.git ~/cs102lings
 ```
 
-You should now have a directory called `cs102lings` verify with `ls`
+You should now have a directory called `cs102lings` verify it with `ls ~`
 
-Change into `cs102lings/labs` with `cd cs102lings/labs` and run `ls` to see the labs.
+Change into `~/cs102lings/labs` with `cd ~/cs102lings/labs` and run `ls` to see the labs.
 
 This directory will contain templates for all the labs in this course as well as tests to verify your solutions.
 
@@ -70,7 +70,7 @@ To update run:
 git pull
 ```
 
-When pulling, if it prints something like this it updated successfully
+When pulling it updated successfully if it prints something like this
 
 ```txt
 Updating 1a2b3c4..5e6f7g8
@@ -80,7 +80,7 @@ Fast-forward
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-If it prints something like this, it was not able to pull changes:
+It was not able to pull changes if it printed something like this
 
 ```txt
 error: Your local changes to the following files would be overwritten by merge:
@@ -94,10 +94,10 @@ Aborting
 
 ## Writing Assignments and Running the Tests
 
-Change into the directory of the lab, for example penname.
+Change into the directory of the lab for example penname.
 
 ```bash
-cd cs102lings/labs/penname
+cd ~/cs102lings/labs/penname
 ```
 
 `penname.cpp` is the template for the lab. Write your program here.
@@ -129,7 +129,7 @@ Output components
 Input components
 
 - `stdin` provides input to `cin`
-- `fin` provides input to `ifstream`
+- `fin` provides input to an `ifstream`
 - `arguments` the command line arguments that will be passed to the input program
 
 All files associated with a test can be found in `tests/TEST_NAME/` e.g. `tests/001-absolute-value-operator/`
@@ -257,7 +257,7 @@ Your address is 59 Student Lane.                              \ Your address is 
 
 The `\` means your output has a newline at the end and the solution does not.
 
-## Showing More Test Output
+## Viewing Test Input
 
 Run the tests with the `--print` flag. This will print the `stdin` or `fin` for the failed test if any exists.
 
