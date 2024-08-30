@@ -3,7 +3,7 @@ from pathlib import Path
 from subprocess import run, PIPE, DEVNULL
 from typing import IO, Any
 from .files import sanitize_binary_output, write_file
-from .config import BIN_FILENAME
+from .config import ScriptConfig
 
 CPP_VERSION = "c++11"
 
@@ -51,8 +51,8 @@ def shell(
     return subprocess.returncode
 
 
-def clean():
-    shell(f"rm -rf {BIN_FILENAME} tests/**/*.tmp.txt")
+def clean(script_config: ScriptConfig):
+    shell(f"rm -rf {script_config.bin_filename} {script_config.tests_dir}/**/*.tmp.txt")
 
 
 def cat(path: Path):
@@ -61,16 +61,16 @@ def cat(path: Path):
     return shell(f"cat {path}")
 
 
-def compile_program(source_file: Path):
+def compile_program(script_config: ScriptConfig):
     arguments = f"-std={CPP_VERSION} -Wall -Wextra -g -O0"
-    return shell(f"g++ {arguments} -o {BIN_FILENAME} {source_file}") == 0
+    return shell(f"g++ {arguments} -o student/{script_config.lab_name}/{script_config.bin_filename} student/{script_config.lab_name}/{script_config.lab_name}.cpp") == 0
 
 
-def check_compiler_warning(source_file: Path):
+def check_compiler_warning(script_config: ScriptConfig):
     arguments = f"-std={CPP_VERSION} -Wall -Wextra -Werror -Wno-sign-compare"
     return (
         shell(
-            f"g++ {arguments} -o {BIN_FILENAME} {source_file}",
+            f"g++ {arguments} -o student/{script_config.lab_name}/{script_config.bin_filename} student/{script_config.lab_name}/{script_config.lab_name}",
             stdout=DEVNULL,
             stderr=DEVNULL,
         )

@@ -6,12 +6,7 @@ from pathlib import Path
 from typing import Any, Literal, TypeVar, overload
 from .files import read_file
 
-
-TESTS_DIR = Path("tests")
-SCRIPTS_DIR = Path("scripts")
-BIN_FILENAME = Path("lab.bin")
-CONFIG_PATH = SCRIPTS_DIR / "config.json"
-
+LABS_DIR = Path("labs")
 
 T = TypeVar("T")
 
@@ -54,7 +49,10 @@ class DebugChoice(Enum):
 
 @dataclass(init=False)
 class ScriptConfig:
-    source_file: Path
+    source_file: str
+    lab_name: str
+    scripts_dir: str
+    tests_dir: str
     is_clean: bool
     is_verbose: bool
     is_show_whitespace: bool
@@ -71,7 +69,7 @@ class ScriptConfig:
     split_stdout_on: str
 
     def __init__(self, cli_arguments: Namespace):
-        self.source_file = validate(cli_arguments.source_file, Path)
+        self.lab_name = validate(cli_arguments.lab_name, str)
         self.is_clean = validate(cli_arguments.clean, bool)
         self.is_verbose = validate(cli_arguments.verbose, bool)
         self.is_show_whitespace = validate(cli_arguments.show_whitespace, bool)
@@ -83,6 +81,15 @@ class ScriptConfig:
         self.is_print = validate(cli_arguments.print, bool)
         self.timeout_duration = validate(cli_arguments.timeout, str)
         self.debug = validate(cli_arguments.debug, DebugChoice)
+
+        CONFIG_PATH = LABS_DIR / self.lab_name / "testconfig.json"
+        SCRIPTS_DIR = Path("scripts")
+        TESTS_DIR = LABS_DIR / self.lab_name / Path("tests")
+        BIN_FILENAME = Path("lab.bin")
+        self.scripts_dir = SCRIPTS_DIR
+        self.bin_filename = BIN_FILENAME
+        self.tests_dir = TESTS_DIR
+        self.source_file = Path("student") / self.lab_name / Path("{filename}.cpp".format(filename = self.lab_name))
 
         content = read_file(CONFIG_PATH)
         config = loads(content)
@@ -110,8 +117,8 @@ def parse_script_config(is_print_help: Literal[False] = False) -> ScriptConfig: 
 def parse_script_config(is_print_help=False):
     parser = ArgumentParser()
     parser.add_argument(
-        "source_file",
-        type=Path,
+        "lab_name",
+        type=str,
         help="The source file to test",
     )
     parser.add_argument(

@@ -3,3 +3,5 @@
 *.tmp.txt
 *.dSYM
 __pycache__
+
+student/

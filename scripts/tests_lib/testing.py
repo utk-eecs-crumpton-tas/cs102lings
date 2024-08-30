@@ -3,7 +3,7 @@ from pathlib import Path
 from sys import argv
 from typing import LiteralString
 from .files import read_file, write_file
-from .config import BIN_FILENAME, TESTS_DIR, ExitCodes, DebugChoice, ScriptConfig
+from .config import ExitCodes, DebugChoice, ScriptConfig
 from .shell import (
     shell,
     cat,
@@ -369,14 +369,14 @@ def has_warnings(script_config: ScriptConfig):
             )
 
     if not script_config.is_skip_warnings_check and not check_compiler_warning(
-        script_config.source_file
+        script_config
     ):
         print_warning(
             "Compiler warnings detected",
             f"Disable this check with the {CODE_STYLE}--skip-warnings-check{RESET} flag",
             end="\n\n",
         )
-        compile_program(script_config.source_file)
+        compile_program(script_config)
         is_warnings = True
 
     return is_warnings
@@ -418,9 +418,9 @@ def run_test(
 
     program_arguments = read_file(arguments_path) if arguments_path.exists() else ""
     command_with_arguments = (
-        f"./{BIN_FILENAME} {program_arguments}"
+        f"./student/{script_config.lab_name}/{script_config.bin_filename} {program_arguments}"
         if program_arguments
-        else f"./{BIN_FILENAME}"
+        else f"./student/{script_config.lab_name}/{script_config.bin_filename}"
     )
 
     program_is_passed, user_exit_status = run_program(
@@ -494,7 +494,7 @@ def run_test(
     if is_exit:
         run_debug(
             choice=script_config.debug,
-            command=BIN_FILENAME.name,
+            command=script_config.bin_filename.name,
             arguments=program_arguments,
             stdin_path=stdin_path,
         )
@@ -504,7 +504,7 @@ def run_test(
 
 
 def run_tests(script_config: ScriptConfig):
-    tests = sorted([test for test in TESTS_DIR.iterdir() if test.is_dir()])
+    tests = sorted([test for test in script_config.tests_dir.iterdir() if test.is_dir()])
     len_tests = len(tests)
 
     all_tests_passed = all(

@@ -94,13 +94,15 @@ Aborting
 
 ## Writing Assignments and Running the Tests
 
-Change into the directory of the lab for example penname.
+Initialize the test with the following command
 
 ```bash
-cd ~/cs102lings/labs/penname
+make <name-of-test>
+# for example
+make penname
 ```
 
-`penname.cpp` is the template for the lab. Write your program here.
+This will create the directory for your project, in `student/penname/`. In this directory you will find `penname.cpp`, this is the file you will edit.
 
 To run the tests for your program, run the following command:
 
@@ -108,11 +110,11 @@ To run the tests for your program, run the following command:
 > The script will recompile your program each time you run it, so you don't need to recompile it yourself.
 > The tests will create a file in your directory called `lab.bin` which is your compiled program.
 
-> **Note**
-> Make sure to include the full version number of python `python3.11` not `python` or `python3`
 
 ```bash
-python3.11 scripts/test.py penname.cpp
+./test.sh <name-of-test>
+# example
+./test.sh penname
 ```
 
 ## How the Tests are Structured

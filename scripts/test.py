@@ -1,4 +1,4 @@
-from tests_lib.config import parse_script_config, TESTS_DIR, SCRIPTS_DIR
+from tests_lib.config import parse_script_config
 from tests_lib.shell import clean
 from tests_lib.testing import ExitCodes, compile_program, run_tests
 from tests_lib.formatting import (
@@ -11,6 +11,11 @@ from tests_lib.git import git_path_is_modified
 
 
 def main():
+
+    script_config = parse_script_config()
+    TESTS_DIR = script_config.tests_dir
+    SCRIPTS_DIR = script_config.scripts_dir
+    
     if not TESTS_DIR.is_dir() or not SCRIPTS_DIR.is_dir():
         parse_script_config(True)
         print()
@@ -21,9 +26,7 @@ def main():
         )
         exit(ExitCodes.SCRIPT_ERROR.value)
 
-    script_config = parse_script_config()
-
-    clean()
+    clean(script_config)
     if script_config.is_clean:
         return
 
@@ -48,7 +51,7 @@ def main():
         )
         exit(ExitCodes.SCRIPT_ERROR.value)
 
-    if not compile_program(script_config.source_file):
+    if not compile_program(script_config):
         print_error("Build failed")
         exit(ExitCodes.BUILD_FAILED.value)
 
