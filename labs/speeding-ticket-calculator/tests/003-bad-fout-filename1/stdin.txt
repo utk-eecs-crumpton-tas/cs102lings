@@ -1,0 +1,2 @@
+tests/003-bad-fout-filename1/fin.txt
+path/does/not/exist/bad-report-filename
