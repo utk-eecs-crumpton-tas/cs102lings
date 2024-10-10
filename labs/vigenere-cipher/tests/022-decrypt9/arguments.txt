@@ -1,0 +1,1 @@
+tests/022-decrypt9/fin.txt tests/022-decrypt9/fout.tmp.txt computerscience d

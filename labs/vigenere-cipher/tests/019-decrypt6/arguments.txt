@@ -1,0 +1,1 @@
+tests/019-decrypt6/fin.txt tests/019-decrypt6/fout.tmp.txt computerscience d
