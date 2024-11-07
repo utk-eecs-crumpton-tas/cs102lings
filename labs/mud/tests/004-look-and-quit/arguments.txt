@@ -1,0 +1,1 @@
+tests/004-look-and-quit/fin.txt
