@@ -1,1 +1,0 @@
-Usage: ./ppm <input file> <output file> [i|I|x|X|y|Y]

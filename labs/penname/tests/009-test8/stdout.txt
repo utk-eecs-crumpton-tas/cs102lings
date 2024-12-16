@@ -1,4 +1,0 @@
-Enter your first and middle names: Enter your age: Enter your street number, name, and type: Enter your city of birth: 
-Your penname name is Miami Elm.
-You will write as a 42 year old.
-Your address is 39 Martinez Way.

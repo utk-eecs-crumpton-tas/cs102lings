@@ -1,1 +1,0 @@
-tests/022-fin-fout-invert/fin.txt tests/022-fin-fout-invert/fout.tmp.txt I

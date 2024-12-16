@@ -1,2 +1,0 @@
-Error: invalid max intensity
-Reading from stdin failed.

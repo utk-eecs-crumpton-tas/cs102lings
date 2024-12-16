@@ -1,4 +1,0 @@
-Enter your first and middle names: Enter your age: Enter your street number, name, and type: Enter your city of birth: 
-Your penname name is Atlanta Birch.
-You will write as a 84 year old.
-Your address is 31 Williams Avenue.

@@ -1,2 +1,0 @@
-Error: invalid width
-Reading from stdin failed.

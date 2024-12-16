@@ -1,2 +1,0 @@
-Error: invalid red channel
-Reading from stdin failed.

@@ -1,2 +1,0 @@
-Error: invalid green channel
-Reading from stdin failed.

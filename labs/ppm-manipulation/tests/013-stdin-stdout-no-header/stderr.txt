@@ -1,2 +1,0 @@
-Error: invalid header
-Reading from stdin failed.
