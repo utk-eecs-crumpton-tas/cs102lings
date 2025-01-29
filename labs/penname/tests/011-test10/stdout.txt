@@ -1,0 +1,4 @@
+Enter your first and middle names: Enter your age: Enter your street number, name, and type: Enter your city of birth: 
+Your penname name is Denver Spruce.
+You will write as a 87 year old.
+Your address is 19 Harris Circle.
