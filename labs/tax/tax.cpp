@@ -27,7 +27,7 @@ using namespace std;
 // (globals, aka variables defined outside of main)
 const double MINIMUM_WAGE = 15080;
 // bracket1 is 0
-const double BRACKET2 = 10275;
+const double BRACKET2 = 11600;
 const double RATE1 = 0.10;
 // TODO: add the rest!
 
