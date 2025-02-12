@@ -1,0 +1,2 @@
+Enter command: Fleet has no cars.
+Fleet has no trucks.
