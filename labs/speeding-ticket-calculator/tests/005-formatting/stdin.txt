@@ -1,0 +1,4 @@
+tests/005-formatting/fin.txt
+tests/005-formatting/fout.tmp.txt
+1 1 1000
+12 31 5000

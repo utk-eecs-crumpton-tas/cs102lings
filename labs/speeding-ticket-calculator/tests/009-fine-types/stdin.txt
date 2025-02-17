@@ -1,0 +1,4 @@
+tests/009-fine-types/fin.txt
+tests/009-fine-types/fout.tmp.txt
+1 1 1000
+12 31 5000
