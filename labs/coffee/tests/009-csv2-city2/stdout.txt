@@ -1,0 +1,16 @@
+Boiling Point at Altitude Calculator
+1. Blue River
+2. Brian Head
+3. Dillon
+4. Frisco
+5. Red River
+6. Alta
+7. Angel Fire
+8. Gunnison
+9. Los Alamos
+10. Encampment
+11. Eagar
+12. Park City
+13. Steamboat Springs
+14. West Yellowstone
+Enter city number: The boiling point at Brian Head is 193.985 degrees Fahrenheit.
