@@ -1,1 +1,1 @@
-usage: ./boiling filename
+usage: ./coffee filename
