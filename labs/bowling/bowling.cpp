@@ -39,7 +39,12 @@ const size_t ROLLS_PER_FRAME = 2;
 const size_t TOTAL_ROLLS = NUMBER_OF_FRAMES * 2 + 1; // 21
 const int NUMBER_OF_PINS = 10;
 
-// Use for debugging
+/* *****************************************************
+ * Function: Print Player Rolls
+ * Description: WRITE YOUR OWN DESCRIPTION HERE. IT
+ * SPAN MULTIPLE LINES. REFER TO THE TAs IF YOU HAVE
+ * ANY QUESTIONS.
+ * ***************************************************** */
 void printPlayerRolls(const vector<int> &playerRolls) {
     for (size_t i = 0; i < playerRolls.size(); ++i) {
         cerr << playerRolls[i] << " ";
@@ -47,6 +52,12 @@ void printPlayerRolls(const vector<int> &playerRolls) {
     cerr << endl;
 }
 
+/* *****************************************************
+ * Function: Input Player Rolls
+ * Description: WRITE YOUR OWN DESCRIPTION HERE. IT
+ * SPAN MULTIPLE LINES. REFER TO THE TAs IF YOU HAVE
+ * ANY QUESTIONS.
+ * ***************************************************** */
 vector<int> inputPlayerRolls() {
     // - handle the first 20 rolls at the last roll separately
     // - Use `[]` to set the values, do not use `push_back`
@@ -78,6 +89,12 @@ vector<int> inputPlayerRolls() {
     return playerRolls;
 }
 
+/* *****************************************************
+ * Function: Calculate Player Score
+ * Description: WRITE YOUR OWN DESCRIPTION HERE. IT
+ * SPAN MULTIPLE LINES. REFER TO THE TAs IF YOU HAVE
+ * ANY QUESTIONS.
+ * ***************************************************** */
 int calculatePlayerScore(const vector<int> &playerRolls) {
     int playerScore = 0;
 
@@ -114,6 +131,13 @@ int calculatePlayerScore(const vector<int> &playerRolls) {
     return playerScore;
 }
 
+
+/* *****************************************************
+ * Function: Print Game Summary
+ * Description: WRITE YOUR OWN DESCRIPTION HERE. IT
+ * SPAN MULTIPLE LINES. REFER TO THE TAs IF YOU HAVE
+ * ANY QUESTIONS.
+ * ***************************************************** */
 void printGameSummary(const vector<string> &playerNames,
                       const vector<int> &playerScores) {
 
