@@ -1,0 +1,2 @@
+Try writing it as "while the last element is zero and there is more than one set, remove the last set".
+You can use `mSets.back()` access the last set, `GetNumSets()` to see how may sets there are, and `mSets.pop_back()` to remove the last set.
