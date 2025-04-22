@@ -63,6 +63,41 @@ class Picture {
     void writeOutput(ostream &out);
 };
 
+// TODO: Implement the Picture class functions here 
+// TODO: Add a function header above each function
+/* *****************************************************
+ * Function: Function Name Here
+ * Description: WRITE YOUR OWN DESCRIPTION HERE. 
+ * ***************************************************** */
+
+/* *****************************************************
+ * Function: Read Input
+ * Description: WRITE YOUR OWN DESCRIPTION HERE. 
+ * ***************************************************** */
+bool Picture::readInput(istream &in) {
+    // - Call `getline` once to check `"P3"`
+    // - Create a stringstream: `stringstream inWithoutComments;`
+    // - Do while `getline` to get all the lines out of your input and
+    //   check if the lines are not empty and start with `'#'`
+    //   then you can do
+    //     `inWithoutComments << line << '\n`
+    //   for all the lines that are not comments
+    // - Then all that's in your `inWithoutComments` is the numbers
+    //   separated by whitespace
+    // - Then after that you can simply use the extraction operator on the
+    //   `stringstream`, `inWithoutComments`, to read in all the numbers
+    // - Read out the `width`, `height`, and `maxIntensity`
+    // - Create a `vector` and use `width` and `height` to resize your vector
+    // - Use a for loop to read in all the pixels
+    // - Check if any of the rgb color values exceed the `maxIntensity`
+
+    return true;
+}
+
+/* *****************************************************
+ * Function: Write Output
+ * Description: WRITE YOUR OWN DESCRIPTION HERE. 
+ * ***************************************************** */
 void Picture::writeOutput(ostream &out) {
     out << "P3" << '\n'
         << width << ' ' << height << '\n'
@@ -83,27 +118,6 @@ void Picture::writeOutput(ostream &out) {
     }
 }
 
-// TODO: Implement the rest of the Picture class
-
-bool Picture::readInput(istream &in) {
-    // - Call `getline` once to check `"P3"`
-    // - Create a stringstream: `stringstream inWithoutComments;`
-    // - Do while `getline` to get all the lines out of your input and
-    //   check if the lines are not empty and start with `'#'`
-    //   then you can do
-    //     `inWithoutComments << line << '\n`
-    //   for all the lines that are not comments
-    // - Then all that's in your `inWithoutComments` is the numbers
-    //   separated by whitespace
-    // - Then after that you can simply use the extraction operator on the
-    //   `stringstream`, `inWithoutComments`, to read in all the numbers
-    // - Read out the `width`, `height`, and `maxIntensity`
-    // - Create a `vector` and use `width` and `height` to resize your vector
-    // - Use a for loop to read in all the pixels
-    // - Check if any of the rgb color values exceed the `maxIntensity`
-
-    return true;
-}
 
 int main(int argc, char **argv) {
     // - argc can be 3 or 4, an argc of 3 means no change to the picture
