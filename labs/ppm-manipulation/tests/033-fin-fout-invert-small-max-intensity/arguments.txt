@@ -1,0 +1,1 @@
+tests/033-fin-fout-invert-small-max-intensity/fin.txt tests/033-fin-fout-invert-small-max-intensity/fout.tmp.txt I

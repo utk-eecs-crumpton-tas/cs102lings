@@ -1,0 +1,1 @@
+- tests/011-stdin-fout-no-change/fout.tmp.txt

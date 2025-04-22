@@ -1,0 +1,1 @@
+tests/023-fin-fout-flip-x/fin.txt tests/023-fin-fout-flip-x/fout.tmp.txt X
